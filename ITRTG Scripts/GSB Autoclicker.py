@@ -7,12 +7,12 @@ import mss.tools
 import pyautogui
 import keyboard
 
-#Steps:
+#steps to use:
 ##1. press "," when cursor is over "Fight Gods" button on special panel
 ##2. fight through "Fight Gods" and click "." when cursor is over a red section of your own health bar
 ##3. click "/" when cursor is over "Finish" Panel
-## After This Autobattler Will Begin Running!
-## hold "x" to quit
+## after This Autobattler Will Begin Running!
+## to stop the script move your windows so that the portion you clicked "." over is neither red or grey (i know this is quite janky)
 
 while True:
     if keyboard.is_pressed(","):
