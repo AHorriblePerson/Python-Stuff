@@ -47,7 +47,5 @@ with mss.mss() as sct:
             pyautogui.click(finish_location)
             pyautogui.click(fight_location)
         else:
-            print("error: not expected pixle, quitting")
-            pyautogui.press("0")
-            pyautogui.click(finish_location)
-            pyautogui.click(fight_location)
+            print("error: not expected pixle, stopping program")
+            break
