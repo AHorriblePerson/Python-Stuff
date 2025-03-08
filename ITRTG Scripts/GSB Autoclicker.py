@@ -7,11 +7,11 @@ import mss.tools
 import pyautogui
 import keyboard
 
-#steps to use:
+#Steps:
 ##1. press "," when cursor is over "Fight Gods" button on special panel
 ##2. fight through "Fight Gods" and click "." when cursor is over a red section of your own health bar
 ##3. click "/" when cursor is over "Finish" Panel
-## after This Autobattler Will Begin Running!
+## After This Autobattler Will Begin Running!
 ## to stop the script move your windows so that the portion you clicked "." over is neither red or grey (i know this is quite janky)
 
 while True:
@@ -30,7 +30,8 @@ while True:
 hp_bar_pixle={"top": hpy, "left": hpx, "width": 1, "height": 1}
 
 red=29
-grey=42
+grey1=42
+grey2=43
 with mss.mss() as sct:
     # Part of the screen to capture
     monitor = hp_bar_pixle
@@ -42,10 +43,10 @@ with mss.mss() as sct:
         img = img[:,0][0]
         if img==red:
             pyautogui.press(["q","w","r"])
-        elif img==grey:
+        elif img==grey1 or img==grey2:
             pyautogui.press("0")
             pyautogui.click(finish_location)
             pyautogui.click(fight_location)
         else:
-            print("error: not expected pixle, stopping program")
+            print("error: not expected pixle, stopping script")
             break
