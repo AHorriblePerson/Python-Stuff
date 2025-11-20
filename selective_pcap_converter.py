@@ -7,7 +7,7 @@ from socket import inet_ntoa
 import pyarrow
 import pyarrow.parquet
 
-#This is a small (and janky) module which can be used to turn pcap files into some more useful formats (specifically parquet, csv, orc and feather). I have only tested if the parquet and csv parts work.
+#This is a small (and janky) thingy which can be used to turn pcap files into some more useful formats (specifically parquet, csv, orc and feather). I have only tested if the parquet and csv parts work.
 #Use at own peril
 
 def pcap2arrowtable(pcap_location):
@@ -87,3 +87,4 @@ def pcaps2format(new_format, pcap_directory, write_directory, names=None, update
         print("Task Completed!")
         print("Total Runtime: ")
         print(end_time-true_start)
+
